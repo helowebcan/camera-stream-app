@@ -20,11 +20,19 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Gradle build
-      run: ./gradlew build
+- name: Gradle build
+  run: gradle build
 
-    - name: Assemble Debug APK
-      run: ./gradlew assembleDebug
+- name: Assemble Debug APK
+  run: gradle assembleDebug
+
+
+- name: Gradle build
+  run: gradle build
+
+- name: Assemble Debug APK
+  run: gradle assembleDebug
+
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
